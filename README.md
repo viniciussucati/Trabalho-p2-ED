@@ -3,8 +3,8 @@
 **Disciplina:** Estrutura de Dados  
 **Curso:** Analise e Desenvolvimento de Sistemas (ADS) - Fatec Ribeirao Preto  
 **Professor:** Eduardo Cruz Araujo  
-**Aluno:** [Seu Nome Completo Aqui]  
-**RA:** [Seu Numero de RA Aqui]  
+**Aluno:** [Vinicius Henrique Sucati de Oliveira]  
+**RA:** [2840482521019]  
 **Tema Escolhido:** Tema B (Tema 2) - Arvores Binarias de Busca (*Binary Search Tree - BST*)  
 
 ---
