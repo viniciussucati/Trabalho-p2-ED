@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simulador Visual — Árvore Binária de Busca (BST)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>🌳 Simulador Interativo: Árvore Binária de Busca (BST)</h1>
+      <p>Estrutura de Dados — ADS | Fatec Ribeirão Preto (2026.2)</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="controls-panel">
+      <div class="control-group">
+        <h3>1. Operações Manuais</h3>
+        <div class="input-row">
+          <input type="number" id="nodeValue" placeholder="Valor (ex: 45)" min="1" max="999" />
+          <button id="btnInsert" class="btn primary">Inserir</button>
+          <button id="btnSearch" class="btn info">Buscar</button>
+          <button id="btnDelete" class="btn danger">Remover</button>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <h3>2. Travessias (Percursos)</h3>
+        <div class="btn-row">
+          <button id="btnInOrder" class="btn secondary">In-Order (E-R-D)</button>
+          <button id="btnPreOrder" class="btn secondary">Pre-Order (R-E-D)</button>
+          <button id="btnPostOrder" class="btn secondary">Post-Order (E-D-R)</button>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <h3>3. Cenários Comparativos (Big-O)</h3>
+        <div class="btn-row">
+          <button id="btnBalanced" class="btn success">Inserção Aleatória O(log n)</button>
+          <button id="btnDegenerate" class="btn warning">Inserção Ordenada / Degenerada O(n)</button>
+        </div>
+      </div>
+
+      <div class="control-group playback-group">
+        <h3>4. Controle de Execução Passo a Passo</h3>
+        <div class="btn-row">
+          <button id="btnPlay" class="btn primary">▶ Play</button>
+          <button id="btnStep" class="btn info">⏭ Próximo Passo (Step)</button>
+          <button id="btnPause" class="btn secondary">⏸ Pausar</button>
+          <button id="btnReset" class="btn danger">🔄 Reiniciar (Reset)</button>
+        </div>
+        <div class="speed-row">
+          <label for="speedRange">Velocidade da Animação:</label>
+          <input type="range" id="speedRange" min="200" max="1500" value="750" step="50" />
+          <span id="speedLabel">750 ms</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="workspace">
+      <div class="canvas-wrapper">
+        <div class="canvas-header">
+          <span>Visualização Estrutural da BST</span>
+          <div class="legend">
+            <span class="badge default">Normal</span>
+            <span class="badge active">Visitando</span>
+            <span class="badge found">Alvo / Concluído</span>
+          </div>
+        </div>
+        <div class="svg-container">
+          <svg id="treeSvg" width="900" height="440" viewBox="0 0 900 440"></svg>
+        </div>
+        <div id="traversalOutput" class="traversal-box">
+          <strong>Resultado da Travessia:</strong> <span id="traversalList">Nenhuma travessia executada ainda.</span>
+        </div>
+      </div>
+
+      <aside class="metrics-panel">
+        <h3>📊 Métricas em Tempo Real</h3>
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <span class="metric-label">Total de Nós (n)</span>
+            <span id="metricNodes" class="metric-value">0</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-label">Altura da Árvore (h)</span>
+            <span id="metricHeight" class="metric-value">-1</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-label">Comparações (Passo/Op.)</span>
+            <span id="metricComparisons" class="metric-value">0</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-label">Perfil Assintótico</span>
+            <span id="metricComplexity" class="metric-value tag">Vazia</span>
+          </div>
+        </div>
+
+        <h3>📝 Log Didático de Execução</h3>
+        <div id="stepLog" class="log-box">
+          <div class="log-entry system">Simulador pronto. Insira um valor ou carregue um cenário comparativo acima.</div>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
