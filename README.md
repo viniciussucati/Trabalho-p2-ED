@@ -11,7 +11,7 @@
 
 ## Video Explicativo (Defesa Tecnica)
 
-> **[CLIQUE AQUI PARA ASSISTIR AO VIDEO EXPLICATIVO](https://seu-link-do-youtube-ou-drive-aqui)**  
+> **[CLIQUE AQUI PARA ASSISTIR AO VIDEO EXPLICATIVO](https://youtu.be/jqkUNL83QeU)**  
 > *(Certifique-se de que o video esteja configurado como "Nao Listado" no YouTube ou com acesso publico no Google Drive).*
 
 ---
